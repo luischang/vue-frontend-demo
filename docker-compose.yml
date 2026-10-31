@@ -1,0 +1,11 @@
+services:
+  frontend:
+    build:
+      context: .
+      args:
+        VITE_WELCOME_MESSAGE: "Hola desde Docker"
+        VITE_APP_ENV: docker
+        VITE_APP_VERSION: 1.0.0
+    image: vue-frontend-demo:1.0.0
+    ports:
+      - "8080:80"
